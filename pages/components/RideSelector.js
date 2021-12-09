@@ -11,7 +11,7 @@ const RideSelector = ({ pickupCoordinates, dropoffCoordinates }) => {
       )
       .then(res =>res.json())
       .then(data => {
-        setRideDuration(data.routes[0].duration / 300)
+        setRideDuration(data.routes[0].duration / 1000)
       })
     }, [pickupCoordinates, dropoffCoordinates])
     return (
